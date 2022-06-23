@@ -34,6 +34,7 @@ deathFR<-FRMaleData$Dxt[formatC(ages.fit),formatC(years.fit)]
 exposureFR<-FRMaleData$Ext[formatC(ages.fit),formatC(years.fit)]
 ```
 
+
 As a reminder, the Lee-Carter model assumes that the log death rates are given by 
 $$ 
 \log \mu_{xt}=\alpha_x+\beta_x \kappa_t
