@@ -1,3 +1,8 @@
+# StanMoMo 1.2.0
+
+Since the package ggfan is scheduled for archival, all dependencies to the ggfan package were removed and in particular, the `forecast_plot` function to generate fan plots was removed.
+
+
 # StanMoMo 1.1.1
 
 The following updates have been made to ensure compatibility with the latest rstan version:

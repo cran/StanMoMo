@@ -3,7 +3,7 @@ title: "Bayesian Mortality Modeling"
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{Bayesian Mortality Modeling}
-  %\VignetteEngine{knitr::knitr}
+  %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
 
@@ -94,7 +94,7 @@ launch_shinystan(fitLC)
 ```
 Note: you need to close the shiny app before continuing in R.
 
-Moreover, the package also includes functions to represent boxplots of the posterior distribution as well as fan plots for death rates predictions based on the `ggplot2` and `ggfan` packages.
+Moreover, the package also includes functions to represent boxplots of the posterior distribution  based on the `ggplot2` package.
 
 For instance, boxplots for the parameters from the Lee-Carter model can be obtained via:
 
@@ -108,11 +108,6 @@ boxplot_post_dist(fitLC, "k", ages.fit, years.fit)
 
 All forecast death rates $\mu_{xt}$ are stored in the output `mufor`. We point out that the output `mufor` is a matrix of dimension $N$ $\times$ $(A . M)$ where  the number of rows $N$ is the posterior sample size and the number of columns $A.M$ is the product of $A$ the age dimension and $M$ the number of forecast years.
 
-Predictions of death rates for the next 10 years for ages 65, 75 and 85 with prediction intervals can be obtained as follows via 
-
-```{r , echo=TRUE}
-forecasting_plot(fitLC,ages.fit,years.fit,deathFR,exposureFR,c(65,75,85))
-```
 
 ## Other models
 

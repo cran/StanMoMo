@@ -3,7 +3,7 @@ title: "Bayesian Model Averaging"
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{Bayesian Model Averaging}
-  %\VignetteEngine{knitr::knitr}
+  %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
 
@@ -27,7 +27,7 @@ Instead of choosing one model, model averaging stems from the idea that a combin
 
 As an alternative approach, different authors considered model selection and averaging based on prediction performance on hold-out data. For instance, Yao et al. (2018) proposed Bayesian model averaging approaches based on leave-one-out cross-validation (LOO-CV). While this method is valid as a measure of fit, LOO-CV is problematic for forecasting. 
 
-Indeed, leaving out only one observation at a time will allow information from the future to influence predictions of the past (i.e., data from times $t + 1, t + 2, \dots,$ would inform predictions for time $t$). Instead, it is more appropriate to use leave-future-out validation. In our context of mortality forecasting, instead of leaving one point out, we leave the last $M$ years of data out and evaluate the prediction performance on these $M$ years. This approach proposed in Barigou et al. (2021) is further discussed in the next section.
+Indeed, leaving out only one observation at a time will allow information from the future to influence predictions of the past (i.e., data from times $t + 1, t + 2, \dots,$ would inform predictions for time $t$). Instead, it is more appropriate to use leave-future-out validation. In our context of mortality forecasting, instead of leaving one point out, we leave the last $M$ years of data out and evaluate the prediction performance on these $M$ years. This approach proposed in Barigou et al. (2023) is further discussed in the next section.
 
 ## Bayesian model averaging via stacking and pseudo-BMA
 

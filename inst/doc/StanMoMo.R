@@ -31,9 +31,6 @@ boxplot_post_dist(fitLC, "a", ages.fit, years.fit)
 boxplot_post_dist(fitLC, "b", ages.fit, years.fit)
 boxplot_post_dist(fitLC, "k", ages.fit, years.fit)
 
-## ----echo=TRUE----------------------------------------------------------------
-forecasting_plot(fitLC,ages.fit,years.fit,deathFR,exposureFR,c(65,75,85))
-
 ## ----eval=FALSE---------------------------------------------------------------
 #  fitRH=rh_stan(death = deathFR,exposure=exposureFR, forecast = 10, family = "poisson",cores=4)
 #  fitAPC=apc_stan(death = deathFR,exposure=exposureFR, forecast = 10, family = "poisson",cores=4)
